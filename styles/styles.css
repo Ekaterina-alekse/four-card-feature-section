@@ -17,6 +17,7 @@
 
 h1,
 h2,
+h3,
 p {
     margin: 0;
 }
@@ -48,4 +49,129 @@ body {
     align-items: center;
     padding: 0;
     margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin: -0.0625rem;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+}
+
+.advantages-page {
+    padding: 4rem 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 23.4375rem;
+}
+
+.title {
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-weight: 600;
+}
+
+.desc {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.advantages-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.advantages-item {
+    position: relative;
+    display: block;
+    max-width: 19.4375rem;
+    min-height: 15.625rem;
+    background-color: var(--color-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.02);
+    padding: 2.5rem 2rem 3rem;
+    overflow: hidden;
+    background-size: 4rem;
+    background-position: bottom 3rem right 2rem;
+    background-repeat: no-repeat;
+}
+
+.advantages-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.advantages-item.supervisor::before {
+    background-color: var(--color-cyan);
+}
+
+.advantages-item.team-builder::before {
+    background-color: var(--color-red);
+}
+
+.advantages-item.karma::before {
+    background-color: var(--color-orange);
+}
+
+.advantages-item.calculator::before {
+    background-color: var(--color-blue);
+}
+
+.supervisor {
+    background-image: url(../images/icon-supervisor.svg);
+}
+
+.team-builder {
+    background-image: url(../images/icon-team-builder.svg);
+}
+
+.karma {
+    background-image: url(../images/icon-karma.svg);
+}
+
+.calculator {
+    background-image: url(../images/icon-calculator.svg);
+}
+
+.advantages-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-bottom: 0.75rem;
+}
+
+.advantages-desc {
+    color: var(--color-grey-400);
+    font-weight: 400;
+    font-size: 0.8125rem;
+}
+
+.attribution {
+    max-width: 19.4375rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.attribution a {
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
